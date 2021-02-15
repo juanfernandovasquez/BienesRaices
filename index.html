@@ -6,29 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" hre f="./css/menu-hamburguesa.css" media="(max-width: 930px)"/>
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="dist/hamburgers.css" rel="stylesheet" media="(max-width: 768px)">
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
 
     <header class="site-header inicio">
+        
         <div class="contenedor contenido-header">
-            <div class="barra">
 
+            <div class="barra">
                 <a href="index.html"><img src="img/logo.svg" alt=""></a>
 
-                <div class="movile-menu">
-                    <a href="#navegacion">
-                        <img src="img/original.svg" alt="barra">
-                    </a>
-                </div>
+
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+
                 <nav id="navegacion" class="navegacion">
                     <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncios</a>
                     <a href="blog.html">Blog</a>
                     <a href="contacto.html">Contacto</a>
                 </nav>
+                
+                  <script>
+                    // Look for .hamburger
+                    var hamburger = document.querySelector(".hamburger");
+                    let listado = document.querySelector(".navegacion")
+                    // On click
+                    hamburger.addEventListener("click", function() {
+                      // Toggle class "is-active"
+                      hamburger.classList.toggle("is-active");
+                      // Do something else, like open/close menu
+                        
+                    });
+                  </script>
+
             </div>
             <h1>Venta de casas y departamentos exclusivos de lujo</h1>
         </div>
@@ -200,6 +222,18 @@
             <P class="copyright">Todos los derechos reservados &copy;</P>
         </div>
     </footer>
+    <script>
+        console.log()
+    </script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+    
+    console.log('estamos en linea') 
+    $('.hamburger').on('click', function() {
+        $('.navegacion').slideToggle();
+    });
+
+</script>
 
 </body>
 
