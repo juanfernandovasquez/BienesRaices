@@ -130,6 +130,10 @@ boton:hover {
     padding: 0rem 0 1rem 0;
 }
 
+@media(max-width: 768px){
+    .site-header.inicio {
+    height: 90vh;}
+}
 .site-header.inicio {
     background-image: url(../img/header.jpg);
     height: 100vh;
@@ -139,6 +143,7 @@ boton:hover {
     background-color: #333333;
     margin: 0;
 }
+
 
 .contenido-header {
     height: 100%;
@@ -515,4 +520,5 @@ textarea {
         display: block;
         margin: 0 auto;
     }
+
 }
