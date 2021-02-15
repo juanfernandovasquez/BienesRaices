@@ -16,19 +16,32 @@
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="index.html"><img src="img/logo.svg" alt=""></a>
-                <div class="movile-menu">
-                    <a href="#navegacion">
-                        <img src="img/original.svg" alt="barra">
-                    </a>
-                </div>
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+
                 <nav id="navegacion" class="navegacion">
                     <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncios</a>
                     <a href="blog.html">Blog</a>
                     <a href="contacto.html">Contacto</a>
                 </nav>
-            </div>
-
+                
+                  <script>
+                    // Look for .hamburger
+                    var hamburger = document.querySelector(".hamburger");
+                    let listado = document.querySelector(".navegacion")
+                    // On click
+                    hamburger.addEventListener("click", function() {
+                      // Toggle class "is-active"
+                      hamburger.classList.toggle("is-active");
+                      // Do something else, like open/close menu
+                        
+                    });
+                  </script>
         </div>
 
     </header>
@@ -99,7 +112,18 @@
             <P class="copyright">Todos los derechos reservados &copy;</P>
         </div>
     </footer>
+    <script>
+        console.log()
+    </script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+    
+    console.log('estamos en linea') 
+    $('.hamburger').on('click', function() {
+        $('.navegacion').slideToggle();
+    });
 
+</script>
 </body>
 
 </html>
